@@ -11,15 +11,17 @@ function startGame() {
     const bowlList = document.querySelectorAll(".bowl");
     let count = 0;
     const countPlaceholder = document.getElementById("count");
+    const sfx = document.getElementById("sfx");
     countPlaceholder.innerText = count;
 
     for (let i = 0; i < bowlList.length; i++) {
         bowlList[i].children[0].addEventListener("click", function() {
+            // tambah efek sound & gambar waktu user click
+            sfx.play();
             count++;
             countPlaceholder.innerText = count;
             this.style.transition = "top 0s";
 
-            // tambah efek sound & gambar waktu user click
         })
     }
 
