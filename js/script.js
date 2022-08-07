@@ -18,6 +18,8 @@ function startGame() {
             count++;
             countPlaceholder.innerText = count;
             this.style.transition = "top 0s";
+
+            // tambah efek sound & gambar waktu user click
         })
     }
 
