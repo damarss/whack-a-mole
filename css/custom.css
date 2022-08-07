@@ -1,0 +1,42 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* game */
+.bowl {
+    width: 200px;
+    height: 200px;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.bowl::after {
+    content: " ";
+    width: 200px;
+    height: 200px;
+    display: block;
+    background: url("../images/dog-bowl.png") no-repeat;
+    background-size: 80%;
+    position: absolute;
+    left: 25px;
+    bottom: -85px;
+    filter: invert(1);
+}
+
+.cheems {
+    width: 200px;
+    height: 200px;
+    background: url("../images/cheems.png") no-repeat;
+    position: absolute;
+    left: -35px;
+    top: 150px;
+    background-size: 150%;
+    transition: top 0.1s;
+}
+
+.cheems.show {
+    top: 0;
+}
