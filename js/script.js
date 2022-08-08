@@ -27,7 +27,7 @@ function startGame() {
 
     let start = setInterval(function () {
         let rand = Math.floor(Math.random() * bowlList.length);
-        let randTime = (Math.floor(Math.random() * 6) + 5) * 100;
+        let randTime = (Math.floor(Math.random() * 5) + 4) * 100;
         let cheems = bowlList[rand].children[0];
         cheems.style.transition = "top 0.1s";
         show(cheems);
@@ -35,11 +35,11 @@ function startGame() {
         setTimeout(function () {
             hide(cheems);
         }, randTime);
-    }, 1500)
+    }, 1200)
 
 
     setTimeout(function() {
         clearInterval(start);
-        alert("You have " + count + " cheems");
-    }, 22000)
+        showSaveModal();
+    }, 31200)
 }
