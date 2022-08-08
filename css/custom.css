@@ -6,8 +6,8 @@
 
 /* game */
 .bowl {
-    width: 200px;
-    height: 200px;
+    width: 12.5rem;
+    height: 12.5rem;
     padding: 0;
     overflow: hidden;
     position: relative;
@@ -15,8 +15,8 @@
 
 .bowl::after {
     content: " ";
-    width: 200px;
-    height: 200px;
+    width: 12.5rem;
+    height: 12.5rem;
     display: block;
     background: url("../images/dog-bowl.png") no-repeat;
     background-size: 80%;
@@ -27,8 +27,8 @@
 }
 
 .cheems {
-    width: 200px;
-    height: 200px;
+    width: 12.5rem;
+    height: 12.5rem;
     background: url("../images/cheems.png") no-repeat;
     position: absolute;
     left: -35px;
