@@ -21,8 +21,8 @@
     background: url("../images/dog-bowl.png") no-repeat;
     background-size: 80%;
     position: absolute;
-    left: 25px;
-    bottom: -85px;
+    left: 1.5625rem;
+    top: 5.3125rem;
     filter: invert(1);
 }
 
@@ -31,8 +31,8 @@
     height: 12.5rem;
     background: url("../images/cheems.png") no-repeat;
     position: absolute;
-    left: -35px;
-    top: 150px;
+    right: 2rem;
+    top: 13rem;
     background-size: 150%;
     transition: top 0.1s;
 }
