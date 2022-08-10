@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Leaderboard</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/custom.css">
 </head>
@@ -21,10 +21,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="/" class="nav-link active" aria-current="page">Home</a>
+                        <a href="/" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/leaderboard.html" class="nav-link">Leaderboard</a>
+                        <a href="/leaderboard.html" class="nav-link active" aria-current="page">Leaderboard</a>
                     </li>
                     <li class="nav-item">
                         <a href="/game.html" class="btn btn-primary rounded-5 px-3 py-2">Play Game</a>
@@ -34,6 +34,33 @@
         </div>
     </nav>
     <!-- navbar end -->
+
+    <section class="leaderboard">
+        <!-- rancangan table leaderboard start -->
+        <div class="container">
+            <table class="table table-hover w-50 mx-auto">
+                <tr>
+                    <th>Name</th>
+                    <th>Score</th>
+                </tr>
+                <tr>
+                    <td>User 1</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>User 2</td>
+                    <td>11</td>
+                </tr>
+            </table>
+        </div>
+        <!-- rancangan table leaderboard end -->
+
+        <!-- <div class="container d-flex justify-content-center">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div> -->
+    </section>
 
     <script src="js/bootstrap.js"></script>
     <script src="js/script.js"></script>
