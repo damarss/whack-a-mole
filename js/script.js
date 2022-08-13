@@ -59,8 +59,15 @@ async function loadLeaderboardData() {
 async function loadLeaderboard() {
     const leaderboard = document.getElementById("tabel-leaderboard");
     const spinner = document.getElementById("spinner");
-    let leaderBoardData = await loadLeaderboardData();
-    leaderBoardData = leaderBoardData.data;
+    // let leaderBoardData = await loadLeaderboardData();
+    // leaderBoardData = leaderBoardData.data;
+
+    // menggunakan data dummy terlebih dahulu untuk menghemat kuota request api
+    let leaderBoardData = [
+        {name: "User 1", score: 15}, 
+        {name: "User 2", score: 10}, 
+        {name: "User 3", score: 5}
+    ];
 
     // remove spinner element after data is successfully loaded
     spinner.remove();
