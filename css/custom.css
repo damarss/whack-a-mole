@@ -1,7 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
+
 *, *::before, *::after {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* navbar */
+nav a.btn {
+    background-color: #E7EAF5;
+    border: none;
+    color: #0C145A;
+}
+
+nav a.btn:hover {
+    background-color: #4D17E2;
+    color: #E7EAF5;
+}
+
+nav .active a.btn {
+    background-color: #dce2f6;
+    color: #0C145A;
 }
 
 /* game */

@@ -45,7 +45,7 @@ function startGame() {
 }
 
 async function loadLeaderboardData() {
-    let data = fetch("https://sheetdb.io/api/v1/8ds12yzscpub6?sort_by=score&sort_order=desc")
+    let data = fetch("https://api.apispreadsheets.com/data/NqcYUAguTssLI5xQ/")
         .then((response) => {
             return response.json()
         })
@@ -59,7 +59,8 @@ async function loadLeaderboardData() {
 async function loadLeaderboard() {
     const leaderboard = document.getElementById("tabel-leaderboard");
     const spinner = document.getElementById("spinner");
-    const leaderBoardData = await loadLeaderboardData();
+    let leaderBoardData = await loadLeaderboardData();
+    leaderBoardData = leaderBoardData.data;
 
     // remove spinner element after data is successfully loaded
     spinner.remove();
@@ -73,7 +74,7 @@ async function loadLeaderboard() {
 }
 
 function saveCurrentScore(nama, skor) {
-    fetch("https://sheetdb.io/api/v1/8ds12yzscpub6", {
+    fetch("https://api.apispreadsheets.com/data/NqcYUAguTssLI5xQ/", {
         method: "POST",
         body: JSON.stringify({
             name: nama, 
