@@ -7,7 +7,6 @@ function hide(obj) {
 }
 
 function startGame() {
-
     const bowlList = document.querySelectorAll(".bowl");
     let count = 0;
     const countPlaceholder = document.getElementById("count");
@@ -44,12 +43,23 @@ function startGame() {
     }, 31200)
 }
 
-async function loadLeaderboardData() {
-    let data = fetch("https://api.apispreadsheets.com/data/NqcYUAguTssLI5xQ/")
+async function loadLeaderboardData(topFive=false) {
+    const url = "https://api.steinhq.com/v1/storages/62f7153bbc148508ba872067/Sheet1";
+    let data = fetch(url)
         .then((response) => {
             return response.json()
         })
         .then((data) => {
+
+            // sortir data berdasarkan skor tertinggi
+            data.sort(function(a, b) {
+                return b.score - a.score;
+            })
+
+            // jika true, maka ambil 5 data teratas
+            if (topFive) {
+                data = data.slice(0, 5);
+            }
             return data;
         })
 
@@ -59,8 +69,7 @@ async function loadLeaderboardData() {
 async function loadLeaderboard() {
     const leaderboard = document.getElementById("tabel-leaderboard");
     const spinner = document.getElementById("spinner");
-    // let leaderBoardData = await loadLeaderboardData();
-    // leaderBoardData = leaderBoardData.data;
+    // const leaderBoardData = await loadLeaderboardData();
 
     // menggunakan data dummy terlebih dahulu untuk menghemat kuota request api
     let leaderBoardData = [
@@ -69,7 +78,7 @@ async function loadLeaderboard() {
         {name: "User 3", score: 5},
         {name: "User 4", score: 1},
     ];
-
+    
     // remove spinner element after data is successfully loaded
     spinner.remove();
     
@@ -77,20 +86,27 @@ async function loadLeaderboard() {
         let row = document.createElement("tr");
         row.innerHTML = "<td>" + (parseInt(data)+1) + "</td>"
                         + "<td>" + leaderBoardData[data].name + "</td>"
-                        + "<td><div class='container'>" + leaderBoardData[data].score + "</div></td>";
+                        + "<td><div class='container align-self-center'>" + leaderBoardData[data].score + "</div></td>";
         leaderboard.appendChild(row);
     }
 }
 
 function saveCurrentScore(nama, skor) {
-    fetch("https://api.apispreadsheets.com/data/NqcYUAguTssLI5xQ/", {
+    const url = "https://api.steinhq.com/v1/storages/62f7153bbc148508ba872067/Sheet1";
+    fetch(url, {
         method: "POST",
-        body: JSON.stringify({
+        body: JSON.stringify([{
             name: nama, 
             score: skor
-        }),
+        }]),
         headers: {
             "Content-type": "application/json; charset=UTF-8"
         }
+    })
+    .then((response) => {
+        return response.json()
+    })
+    .then((json) => {
+        console.log(json)
     })
 }

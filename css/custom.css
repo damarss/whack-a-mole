@@ -92,7 +92,7 @@ nav .active a.btn {
 }
 
 #tabel-leaderboard td:last-child .container {
-    margin: 0;
+    margin: auto 0;
     padding: 0.8rem;
     font-size: 18px;
     font-weight: 800;
