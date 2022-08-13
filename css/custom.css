@@ -12,10 +12,6 @@ body {
 
 
 /* navbar */
-nav {
-    height: 70px;
-}
-
 nav a.btn {
     background-color: #E7EAF5;
     border: none;
