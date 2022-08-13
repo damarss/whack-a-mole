@@ -45,7 +45,7 @@ function startGame() {
 }
 
 async function loadLeaderboardData() {
-    let data = fetch("https://sheetdb.io/api/v1/8ds12yzscpub6")
+    let data = fetch("https://sheetdb.io/api/v1/8ds12yzscpub6?sort_by=score&sort_order=desc")
         .then((response) => {
             return response.json()
         })
