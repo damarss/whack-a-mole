@@ -12,6 +12,10 @@ body {
 
 
 /* navbar */
+nav {
+    height: 70px;
+}
+
 nav a.btn {
     background-color: #E7EAF5;
     border: none;
@@ -24,8 +28,8 @@ nav a.btn:hover {
 }
 
 nav .active a.btn {
-    background-color: #dce2f6;
-    color: #0C145A;
+    background-color: #5526d5;
+    color: #E7EAF5;
 }
 
 /* game */
@@ -63,4 +67,42 @@ nav .active a.btn {
 
 .cheems.show {
     top: 0;
+}
+
+
+/* leaderboard */
+#tabel-leaderboard td {
+    margin: auto;
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+    line-height: 21px;
+    border: none;
+}
+
+#tabel-leaderboard tr:nth-child(odd) {
+    background-color: #f3f5fc;
+}
+
+#tabel-leaderboard td:first-child {
+    font-weight: 600;
+    font-size: 21px;
+    width: 17%;
+    padding: 1.3rem;
+}
+
+#tabel-leaderboard td:last-child {
+    padding: 0.5rem;
+    width: 25%;
+}
+
+#tabel-leaderboard td:last-child .container {
+    margin: 0;
+    padding: 0.8rem;
+    font-size: 18px;
+    font-weight: 800;
+    background-color: #4D17E2;
+    color: #E7EAF5;
+    border-radius: 0.5rem;
+    text-align: center;
+    width: 75px;
 }

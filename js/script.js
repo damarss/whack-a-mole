@@ -66,7 +66,8 @@ async function loadLeaderboard() {
     let leaderBoardData = [
         {name: "User 1", score: 15}, 
         {name: "User 2", score: 10}, 
-        {name: "User 3", score: 5}
+        {name: "User 3", score: 5},
+        {name: "User 4", score: 1},
     ];
 
     // remove spinner element after data is successfully loaded
@@ -74,8 +75,9 @@ async function loadLeaderboard() {
     
     for (let data in leaderBoardData) {
         let row = document.createElement("tr");
-        row.innerHTML = "<td>" + leaderBoardData[data].name + "</td>" +
-                        "<td>" + leaderBoardData[data].score + "</td>";
+        row.innerHTML = "<td>" + (parseInt(data)+1) + "</td>"
+                        + "<td>" + leaderBoardData[data].name + "</td>"
+                        + "<td><div class='container'>" + leaderBoardData[data].score + "</div></td>";
         leaderboard.appendChild(row);
     }
 }
