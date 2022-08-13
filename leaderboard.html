@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/custom.css">
 </head>
-<body>
+<body onload="loadLeaderboard()">
     <!-- navbar start -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
@@ -38,28 +38,25 @@
     <section class="leaderboard">
         <!-- rancangan table leaderboard start -->
         <div class="container">
-            <table class="table table-hover w-50 mx-auto">
-                <tr>
-                    <th>Name</th>
-                    <th>Score</th>
-                </tr>
-                <tr>
-                    <td>User 1</td>
-                    <td>12</td>
-                </tr>
-                <tr>
-                    <td>User 2</td>
-                    <td>11</td>
-                </tr>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody id="tabel-leaderboard">
+
+                </tbody>
             </table>
         </div>
         <!-- rancangan table leaderboard end -->
 
-        <!-- <div class="container d-flex justify-content-center">
+        <div id="spinner" class="container d-flex justify-content-center">
             <div class="spinner-border" role="status">
                 <span class="visually-hidden">Loading...</span>
             </div>
-        </div> -->
+        </div>
     </section>
 
     <script src="js/bootstrap.js"></script>

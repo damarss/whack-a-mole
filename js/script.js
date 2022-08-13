@@ -43,3 +43,44 @@ function startGame() {
         showSaveModal();
     }, 31200)
 }
+
+async function loadLeaderboardData() {
+    let data = fetch("https://sheetdb.io/api/v1/8ds12yzscpub6")
+        .then((response) => {
+            return response.json()
+        })
+        .then((data) => {
+            return data;
+        })
+
+    return data;
+}
+
+async function loadLeaderboard() {
+    const leaderboard = document.getElementById("tabel-leaderboard");
+    const spinner = document.getElementById("spinner");
+    const leaderBoardData = await loadLeaderboardData();
+
+    // remove spinner element after data is successfully loaded
+    spinner.remove();
+    
+    for (let data in leaderBoardData) {
+        let row = document.createElement("tr");
+        row.innerHTML = "<td>" + leaderBoardData[data].name + "</td>" +
+                        "<td>" + leaderBoardData[data].score + "</td>";
+        leaderboard.appendChild(row);
+    }
+}
+
+function saveCurrentScore(nama, skor) {
+    fetch("https://sheetdb.io/api/v1/8ds12yzscpub6", {
+        method: "POST",
+        body: JSON.stringify({
+            name: nama, 
+            score: skor
+        }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    })
+}
