@@ -6,6 +6,12 @@ function hide(obj) {
     obj.classList.remove("show");
 }
 
+function showSaveModal() {
+    const showModalButton = document.getElementById("showModalButton");
+
+    showModalButton.click();
+}
+
 function startGame() {
     const bowlList = document.querySelectorAll(".bowl");
     let count = 0;

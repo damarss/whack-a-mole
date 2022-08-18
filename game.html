@@ -1,80 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/custom.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+  </head>
+  <body>
     <!-- navbar start -->
     <nav class="navbar navbar-expand-lg py-3">
-        <div class="container">
-            <a class="navbar-brand" href="/">
-                Navbar
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a href="/home.html" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/leaderboard.html" class="nav-link">Leaderboard</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a href="/game.html" class="btn btn-primary active rounded-5 px-3 py-2" aria-current="page">Play Game</a>
-                    </li>
-                </ul>
-            </div>
+      <div class="container">
+        <a class="navbar-brand" href="/"> Navbar </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="/home.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/leaderboard.html" class="nav-link">Leaderboard</a>
+            </li>
+            <li class="nav-item active">
+              <a
+                href="/game.html"
+                class="btn btn-primary active rounded-5 px-3 py-2"
+                aria-current="page"
+                >Play Game</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
     <!-- navbar end -->
 
     <section class="game-title">
-        <div class="container text-center">
-            <h1 class="fw-bolder">Bonk <span id="count"></span></h1>
-            <a class="btn btn-primary" href="#" role="button" onclick="startGame()">Start</a>
-        </div>
+      <div class="container text-center">
+        <h1 class="fw-bolder">Bonk <span id="count"></span></h1>
+        <a class="btn btn-primary" href="#" role="button" onclick="startGame()"
+          >Start</a
+        >
+      </div>
     </section>
 
     <section class="game" id="game">
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div id="bowl-1" class="col-lg-3 bowl mx-md-3">
-                    <div class="cheems" onclick="hide(this)"></div>
-                </div>
-                <div id="bowl-2" class="col-lg-3 bowl mx-md-3">
-                    <div class="cheems" onclick="hide(this)"></div>
-                </div>
-                <div id="bowl-3" class="col-lg-3 bowl mx-md-3">
-                    <div class="cheems" onclick="hide(this)"></div>
-                </div>
-                <div id="bowl-4" class="col-lg-3 bowl mx-md-3">
-                    <div class="cheems" onclick="hide(this)"></div>
-                </div>
-                <div id="bowl-5" class="col-lg-3 bowl mx-md-3">
-                    <div class="cheems" onclick="hide(this)"></div>
-                </div>
-                <div id="bowl-6" class="col-lg-3 bowl mx-md-3">
-                    <div class="cheems" onclick="hide(this)"></div>
-                </div>
-                <div id="bowl-7" class="col-lg-3 bowl mx-md-3">
-                    <div class="cheems" onclick="hide(this)"></div>
-                </div>
-                <div id="bowl-8" class="col-lg-3 bowl mx-md-3">
-                    <div class="cheems" onclick="hide(this)"></div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div id="bowl-1" class="col-sm-2 col-lg-3 bowl mx-md-3">
+            <div class="cheems" onclick="hide(this)"></div>
+          </div>
+          <div id="bowl-2" class="col-sm-2 col-lg-3 bowl mx-md-3">
+            <div class="cheems" onclick="hide(this)"></div>
+          </div>
+          <div id="bowl-3" class="col-sm-2 col-lg-3 bowl mx-md-3">
+            <div class="cheems" onclick="hide(this)"></div>
+          </div>
+          <div id="bowl-4" class="col-sm-2 col-lg-3 bowl mx-md-3">
+            <div class="cheems" onclick="hide(this)"></div>
+          </div>
+          <div id="bowl-5" class="col-sm-2 col-lg-3 bowl mx-md-3">
+            <div class="cheems" onclick="hide(this)"></div>
+          </div>
+          <div id="bowl-6" class="col-sm-2 col-lg-3 bowl mx-md-3">
+            <div class="cheems" onclick="hide(this)"></div>
+          </div>
+          <div id="bowl-7" class="col-sm-2 col-lg-3 bowl mx-md-3">
+            <div class="cheems" onclick="hide(this)"></div>
+          </div>
+          <div id="bowl-8" class="col-sm-2 col-lg-3 bowl mx-md-3">
+            <div class="cheems" onclick="hide(this)"></div>
+          </div>
         </div>
+      </div>
     </section>
+
+    <!-- modal save score start -->
+
+    <!-- Button trigger modal -->
+    <button
+      id="showModalButton"
+      type="button"
+      class="btn d-none"
+      data-bs-toggle="modal"
+      data-bs-target="#staticBackdrop"
+    ></button>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+          </div>
+          <div class="modal-body">
+            <form action="#">
+                <label for="name" class="form-label">Input your name</label>
+                <input type="text" class="form-control" aria-describedby="nameHelp" name="name" id="name">
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Don't save
+            </button>
+            <button type="button" class="btn btn-primary">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal save score end -->
 
     <audio src="audio/bonk.mp3" id="sfx"></audio>
     <script src="js/bootstrap.js"></script>
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
