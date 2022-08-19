@@ -8,7 +8,6 @@ function hide(obj) {
 
 function showSaveModal() {
   const showModalButton = document.getElementById("showModalButton");
-
   showModalButton.click();
 }
 
@@ -16,6 +15,12 @@ function showSuccessToast() {
   const successToast = document.getElementById("successToast");
   const toast = new bootstrap.Toast(successToast);
   toast.show();
+}
+
+function showFailedToast() {
+  const failedToast = document.getElementById("failedToast");
+  const toas = new bootstrap.Toast(failedToast);
+  toas.show();
 }
 
 function startGame() {
@@ -108,10 +113,10 @@ async function loadLeaderboard() {
   }
 }
 
-function saveCurrentScore(nama, skor) {
+async function saveCurrentScore(nama, skor) {
   const url =
     "https://api.steinhq.com/v1/storages/62f7153bbc148508ba872067/Sheet1";
-  fetch(url, {
+  let success = fetch(url, {
     method: "POST",
     body: JSON.stringify([
       {
@@ -122,21 +127,33 @@ function saveCurrentScore(nama, skor) {
     headers: {
       "Content-type": "application/json; charset=UTF-8",
     },
-  })
-    .then((response) => {
-      return response.json();
-    })
-    .then((json) => {
-      console.log(json);
-    });
+  }).then((response) => {
+    return response.status;
+  });
+
+  return success;
 }
 
-function saveModalAction() {
+function dontSave() {
+  const form = document.querySelector("form");
+  form.reset();
+}
+
+async function saveModalAction() {
   event.preventDefault();
+  const form = document.querySelector("form");
   const name = document.getElementById("name").value;
   const score = parseInt(document.getElementById("count").innerText);
 
-  saveCurrentScore(name, score);
+  let status = await saveCurrentScore(name, score);
+
+  if (status == 200) {
+    showSuccessToast();
+  } else {
+    showFailedToast();
+    setTimeout(function () {
+      showSaveModal();
+    }, 500);
+  }
   document.querySelector("button.btn.btn-secondary").click();
-  showSuccessToast();
 }

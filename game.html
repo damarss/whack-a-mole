@@ -137,6 +137,8 @@
               type="button"
               class="btn btn-secondary"
               data-bs-dismiss="modal"
+              onclick="dontSave()"
+              ;
             >
               Jangan simpan
             </button>
@@ -185,6 +187,37 @@
       </div>
     </div>
     <!-- toast success save score end -->
+    <!-- toast failed save score start -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div
+        id="failedToast"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="toast-header">
+          <img
+            src="images/cancel.png"
+            width="20"
+            class="rounded me-2"
+            alt="success icon"
+          />
+          <strong class="me-auto">Tidak Berhasil Save Score</strong>
+          <small>0 mins ago</small>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="toast-body">
+          Score Anda tidak berhasil disimpan, silakan coba save score kembali
+        </div>
+      </div>
+    </div>
+    <!-- toast failed save score end -->
 
     <audio src="audio/bonk.mp3" id="sfx"></audio>
     <script src="js/bootstrap.js"></script>
