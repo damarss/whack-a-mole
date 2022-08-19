@@ -12,6 +12,12 @@ function showSaveModal() {
   showModalButton.click();
 }
 
+function showSuccessToast() {
+  const successToast = document.getElementById("successToast");
+  const toast = new bootstrap.Toast(successToast);
+  toast.show();
+}
+
 function startGame() {
   const bowlList = document.querySelectorAll(".bowl");
   let count = 0;
@@ -132,4 +138,5 @@ function saveModalAction() {
 
   saveCurrentScore(name, score);
   document.querySelector("button.btn.btn-secondary").click();
+  showSuccessToast();
 }
