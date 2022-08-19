@@ -28,7 +28,10 @@ function startGame() {
   let count = 0;
   const countPlaceholder = document.getElementById("count");
   const sfx = document.getElementById("sfx");
+  const startBtn = document.getElementById("startBtn");
   countPlaceholder.innerText = count;
+
+  startBtn.classList.add("d-none");
 
   for (let i = 0; i < bowlList.length; i++) {
     bowlList[i].children[0].addEventListener("click", function () {
@@ -55,6 +58,7 @@ function startGame() {
   setTimeout(function () {
     clearInterval(start);
     showSaveModal();
+    startBtn.classList.remove("d-none");
   }, 31200);
 }
 
