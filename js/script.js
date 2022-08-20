@@ -149,15 +149,24 @@ async function saveModalAction() {
   const name = document.getElementById("name").value;
   const score = parseInt(document.getElementById("count").innerText);
 
+  // nama harus terisi
+  if (name == "") {
+    showFailedToast();
+    return;
+  }
+
+  // score harus ada atau game harus sudah dimulai
+  if (isNaN(score)) {
+    showFailedToast();
+    return;
+  }
+
   let status = await saveCurrentScore(name, score);
 
   if (status == 200) {
     showSuccessToast();
   } else {
     showFailedToast();
-    setTimeout(function () {
-      showSaveModal();
-    }, 500);
   }
   document.querySelector("button.btn.btn-secondary").click();
 }
