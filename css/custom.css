@@ -29,6 +29,14 @@ nav .active a.btn {
   color: #e7eaf5;
 }
 
+/* home */
+.instruction .col-md-4 {
+  /* ganti background, sekarang masih asal */
+  background-color: #f3f5fc;
+  width: 360px;
+}
+
+
 /* game */
 .bowl {
   width: 12.5rem;
@@ -81,7 +89,7 @@ nav .active a.btn {
 
 
 /* leaderboard */
-#tabel-leaderboard td {
+#tabel-leaderboard td, #tabel-topfive td {
   margin: auto;
   padding-top: 1.3rem;
   padding-bottom: 1.3rem;
@@ -89,23 +97,23 @@ nav .active a.btn {
   border: none;
 }
 
-#tabel-leaderboard tr:nth-child(odd) {
+#tabel-leaderboard tr:nth-child(odd), #tabel-topfive tr:nth-child(odd) {
   background-color: #f3f5fc;
 }
 
-#tabel-leaderboard td:first-child {
+#tabel-leaderboard td:first-child, #tabel-topfive td:first-child {
   font-weight: 600;
   font-size: 21px;
   width: 17%;
   padding: 1.3rem;
 }
 
-#tabel-leaderboard td:last-child {
+#tabel-leaderboard td:last-child, #tabel-topfive td:last-child {
   padding: 0.5rem;
   width: 25%;
 }
 
-#tabel-leaderboard td:last-child .container {
+#tabel-leaderboard td:last-child .container, #tabel-topfive td:last-child .container {
   margin: auto 0;
   padding: 0.8rem;
   font-size: 18px;

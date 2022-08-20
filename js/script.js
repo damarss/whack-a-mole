@@ -85,10 +85,12 @@ async function loadLeaderboardData(topFive = false) {
   return data;
 }
 
-async function loadLeaderboard() {
-  const leaderboard = document.getElementById("tabel-leaderboard");
+async function loadLeaderboard(topFive = false) {
+  const leaderboard = topFive
+    ? document.getElementById("tabel-topfive")
+    : document.getElementById("tabel-leaderboard");
   const spinner = document.getElementById("spinner");
-  // const leaderBoardData = await loadLeaderboardData();
+  // const leaderBoardData = await loadLeaderboardData(topFive);
 
   // menggunakan data dummy terlebih dahulu untuk menghemat kuota request api
   let leaderBoardData = [
