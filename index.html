@@ -12,7 +12,7 @@
     <!-- navbar start -->
     <nav class="navbar navbar-expand-lg py-3">
       <div class="container">
-        <a class="navbar-brand" href="/"> BONK. </a>
+        <a class="navbar-brand fw-bold fs-2" href="/"> BONK. </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -47,226 +47,190 @@
     </nav>
     <!-- navbar end -->
 
-    <div style="height: 190vh;">
-      <!-- hero start -->
-      <section class="hero mt-3">
-        <div class="container">
-          <div class="row d-flex">
-            <div class="col-md-5 align-self-center">
-              <h1 class="fw-bold">Mainkan Game Klasik</h1>
-              <p>
-                Bonk merupakan sebuah adaptasi dari game klasik
-                <i>whack a mole</i> yang dihadirkan dalam bentuk yang berbeda dan
-                dapat dimainkan di website ini.
-              </p>
-              <div
-                class="btn-toolbar d-flex align-items-center gap-2 mb-3"
-                role="group"
-                aria-label="button group"
+    <!-- hero start -->
+    <section id="hero" class="hero mt-3">
+      <div class="container">
+        <div class="row d-flex">
+          <div class="col-md-5 align-self-center">
+            <h1 class="fw-semibold text-uppercase">LET'S PLAY THE GAME!!</h1>
+            <p>
+              Bonk merupakan sebuah adaptasi dari game
+              <i>whack a mole</i> yang dihadirkan dalam bentuk yang berbeda dan
+              dapat dimainkan di website ini.
+            </p>
+            <div
+              class="btn-toolbar d-flex align-items-center gap-2 mb-3"
+              role="group"
+              aria-label="button group"
+            >
+              <a
+                href="/game.html"
+                class="btn btn-primary rounded-5 px-5"
+                role="button"
+                >Play</a
               >
-                <a
-                  href="/game.html"
-                  class="btn btn-primary rounded-5 px-3"
-                  role="button"
-                  >Play Game</a
-                >
-                <a href="#" class="btn btn-link text-dark" role="button"
-                  >Learn More</a
-                >
-              </div>
-            </div>
-            <div class="col-md-7 d-flex justify-content-center">
-              <!-- tempat gambar untuk hero start -->
-              <!-- <img src="" alt="" width="500" height="500"> -->
-              <div
-                style="
-                  width: 500px;
-                  border-radius: 25px;
-                  height: 500px;
-                  background-color: lightblue;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                "
+              <a href="#instruction" class="btn btn-link text-dark rounded-5" role="button"
+                >Learn More</a
               >
-                Ganti gambar
-              </div>
-              <!-- tempat gambar untuk hero end -->
             </div>
+          </div>
+          <div class="col-md-7 d-flex justify-content-center">
+            <!-- tempat gambar untuk hero start -->
+            <!-- <img src="" alt="" width="500" height="500"> -->
+            <div
+              style="
+                width: 500px;
+                border-radius: 25px;
+                height: 500px;
+                background-color: lightblue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              Ganti gambar
+            </div>
+            <!-- tempat gambar untuk hero end -->
           </div>
         </div>
-      </section>
-      <!-- hero end -->
+      </div>
+    </section>
+    <!-- hero end -->
 
-      <!-- topfive start -->
-      <section class="topfive mt-5">
-        <div class="container">
-          <div class="row">
-            <h2 class="fw-bold text-center">Top Five Player</h2>
-          </div>
-          <div class="row mx-md-5">
-            <table class="table table-hover">
-              <thead>
-                <tr>
-                  <th>Rank</th>
-                  <th>Name</th>
-                  <th>Score</th>
-                </tr>
-              </thead>
-              <tbody id="tabel-topfive"></tbody>
-            </table>
+    <!-- topfive start -->
+    <section class="topfive mt-5">
+      <div class="container">
+        <div class="row">
+          <h2 class="fw-bold text-center">Top 5 Player</h2>
+        </div>
+        <div class="row mx-md-5">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Score</th>
+              </tr>
+            </thead>
+            <tbody id="tabel-topfive"></tbody>
+          </table>
 
-            <!-- spinner start -->
-            <div id="spinner" class="container d-flex justify-content-center">
-              <div class="spinner-border" role="status">
-                <span class="visually-hidden">Loading...</span>
-              </div>
+          <!-- spinner start -->
+          <div id="spinner" class="container d-flex justify-content-center">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
             </div>
-            <!-- spinner end -->
+          </div>
+          <!-- spinner end -->
+        </div>
+      </div>
+    </section>
+    <!-- topfive end -->
+
+    <!-- instruction start -->
+    <section id="instruction" class="instruction mt-5">
+      <div class="container">
+        <div class="row mb-3">
+          <div class="col">
+            <h2 class="text-center fw-bold text-capitalize">
+              Dapatkan score tertinggimu dan<br>jadilah pemimpin klasemen
+            </h2>
           </div>
         </div>
-      </section>
-      <!-- topfive end -->
-
-      <!-- instruction start -->
-      <section class="instruction mt-5">
-        <div class="container">
-          <div class="row mb-3">
-            <div class="col">
-              <h2 class="text-center fw-bold">
-                Mainkan Game Ini dan Raih<br />Rank Tertinggi di Leaderboard
-              </h2>
+        <div class="row mt-4 d-flex gap-3 justify-content-center">
+          <div class="col-md-4 pt-3 rounded-4">
+            <!-- ganti gambar start -->
+            <!-- <img src="" alt="" width="75" heigh="75"> -->
+            <div
+              style="
+                height: 75px;
+                width: 75px;
+                background-color: lightblue;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              Ganti
             </div>
+            <!-- ganti gambar end -->
+            <h5 class="mt-3">1. Start</h5>
+            <p>Masuk ke halaman Play Game</p>
           </div>
-          <div class="row mt-4 d-flex gap-3 justify-content-center">
-            <div class="col-md-4 pt-3 rounded-4">
-              <!-- ganti gambar start -->
-              <!-- <img src="" alt="" width="75" heigh="75"> -->
-              <div
-                style="
-                  height: 75px;
-                  width: 75px;
-                  background-color: lightblue;
-                  border-radius: 50%;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                "
-              >
-                Ganti
-              </div>
-              <!-- ganti gambar end -->
-              <h5 class="mt-3">1. Start</h5>
-              <p>Masuk ke halaman Play Game</p>
+          <div class="col-md-4 pt-3 rounded-4">
+            <!-- ganti gambar start -->
+            <!-- <img src="" alt="" width="75" heigh="75"> -->
+            <div
+              style="
+                height: 75px;
+                width: 75px;
+                background-color: lightblue;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              Ganti
             </div>
-            <div class="col-md-4 pt-3 rounded-4">
-              <!-- ganti gambar start -->
-              <!-- <img src="" alt="" width="75" heigh="75"> -->
-              <div
-                style="
-                  height: 75px;
-                  width: 75px;
-                  background-color: lightblue;
-                  border-radius: 50%;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                "
-              >
-                Ganti
-              </div>
-              <!-- ganti gambar end -->
-              <h5 class="mt-3">2. Play</h5>
-              <p>Mainkan game yang ada di website ini</p>
+            <!-- ganti gambar end -->
+            <h5 class="mt-3">2. Play</h5>
+            <p>Mainkan game yang ada di website ini</p>
+          </div>
+          <div class="col-md-4 pt-3 rounded-4">
+            <!-- ganti gambar start -->
+            <!-- <img src="" alt="" width="75" heigh="75"> -->
+            <div
+              style="
+                height: 75px;
+                width: 75px;
+                background-color: lightblue;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              Ganti
             </div>
-            <div class="col-md-4 pt-3 rounded-4">
-              <!-- ganti gambar start -->
-              <!-- <img src="" alt="" width="75" heigh="75"> -->
-              <div
-                style="
-                  height: 75px;
-                  width: 75px;
-                  background-color: lightblue;
-                  border-radius: 50%;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                "
-              >
-                Ganti
-              </div>
-              <!-- ganti gambar end -->
-              <h5 class="mt-3">3. Be The Leader</h5>
-              <p>
-                Raih score tertinggi dan jangan lupa untuk simpan score setelah
-                selesai bermain
-              </p>
-            </div>
+            <!-- ganti gambar end -->
+            <h5 class="mt-3">3. Be The Leader</h5>
+            <p>
+              Raih score tertinggi dan jangan lupa untuk simpan score setelah
+              selesai bermain
+            </p>
           </div>
         </div>
-      </section>
-      <!-- instruction end -->
-    </div>
-    
+      </div>
+    </section>
+    <!-- instruction end -->
 
-    <!-- Footer section -->
-    <div class="container-fluid mt-5">
-      <!-- Footer -->
-      <footer class="text-center text-white bg-primary">
-          <!-- Grid container -->
-          <div class="container">
-              <!-- Section: Links -->
-              <section class="mt-5">
-              <!-- Grid row-->
-                  <div class="row text-center d-flex justify-content-center p-4">
-                      <!-- Grid column -->
-                      <div class="col-md-2">
-                      <h6 class="text-uppercase font-weight-bold">
-                          <a href="/" class="text-white">About Bonk</a>
-                      </h6>
-                      </div>
-                      <!-- Grid column -->
-          
-                      <!-- Grid column -->
-                      <div class="col-md-2">
-                      <h6 class="text-uppercase font-weight-bold">
-                          <a href="/home.html" class="text-white">Home</a>
-                      </h6>
-                      </div>
-                      <!-- Grid column -->
-          
-                      <!-- Grid column -->
-                      <div class="col-md-2">
-                      <h6 class="text-uppercase font-weight-bold">
-                          <a href="/leaderboard.html" class="text-white">Leaderboard</a>
-                      </h6>
-                      </div>
-                      <!-- Grid column -->
-          
-                      <!-- Grid column -->
-                      <div class="col-md-2">
-                      <h6 class="text-uppercase font-weight-bold">
-                          <a href="#" class="text-white">Contact</a>
-                      </h6>
-                      </div>
-                      <!-- Grid column -->
-                  </div>
-              <!-- Grid row-->
-              </section>
-              <!-- Section: Links -->
+    <!-- Footer section start -->
+    <footer class="mt-5">
+      <div class="container-fluid bg-primary text-white">
+        <div class="row text-center d-flex justify-content-center p-4 text-uppercase">
+          <div class="col-md-3">
+            <a href="#hero" class="btn btn-link text-white fs-6 fw-bold text-decoration-none">About Bonk</a>
           </div>
-          <!-- Grid container -->
-  
-          <!-- Copyright -->
-          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-              © 2022 Copyright: Kelompok 10 Komnet
+          <div class="col-md-3">
+            <a href="/" class="btn btn-link text-white fs-6 fw-bold text-decoration-none">Home</a>
           </div>
-          <!-- Copyright -->
-      </footer>
-      <!-- Footer -->
-  </div>
-  <!-- End of .container -->
-<!-- Footer section end -->
+          <div class="col-md-3">
+            <a href="/leaderboard.html" class="btn btn-link text-white fs-6 fw-bold text-decoration-none">Leaderboard</a>
+          </div>
+          <div class="col-md-3">
+            <a href="/" class="btn btn-link text-white fs-6 fw-bold text-decoration-none">Contact</a>
+          </div>
+        </div>
+        <div class="row p-3 text-center" style="background-color: rgba(0, 0, 0, 0.2);">
+          <div class="col">
+            &copy; 2022 Copyright Kelompok 10 Komnet
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer section end -->
 
     <script src="js/bootstrap.js"></script>
     <script src="js/script.js"></script>

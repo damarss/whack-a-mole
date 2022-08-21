@@ -10,6 +10,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  min-height: 100vh;
 }
 
 /* navbar */
@@ -34,6 +35,7 @@ nav .active a.btn {
   /* ganti background, sekarang masih asal */
   background-color: #f3f5fc;
   width: 360px;
+  height: 230px;
 }
 
 
