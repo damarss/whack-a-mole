@@ -59,7 +59,7 @@ function startGame() {
     clearInterval(start);
     showSaveModal();
     startBtn.classList.remove("d-none");
-  }, 31200);
+  }, 32000);
 }
 
 async function loadLeaderboardData(topFive = false) {
@@ -90,15 +90,15 @@ async function loadLeaderboard(topFive = false) {
     ? document.getElementById("tabel-topfive")
     : document.getElementById("tabel-leaderboard");
   const spinner = document.getElementById("spinner");
-  // const leaderBoardData = await loadLeaderboardData(topFive);
+  const leaderBoardData = await loadLeaderboardData(topFive);
 
   // menggunakan data dummy terlebih dahulu untuk menghemat kuota request api
-  let leaderBoardData = [
-    { name: "User 1", score: 15 },
-    { name: "User 2", score: 10 },
-    { name: "User 3", score: 5 },
-    { name: "User 4", score: 1 },
-  ];
+  // let leaderBoardData = [
+  //   { name: "User 1", score: 15 },
+  //   { name: "User 2", score: 10 },
+  //   { name: "User 3", score: 5 },
+  //   { name: "User 4", score: 1 },
+  // ];
 
   // remove spinner element after data is successfully loaded
   spinner.remove();

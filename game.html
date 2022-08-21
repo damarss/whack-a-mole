@@ -95,6 +95,133 @@
     </section>
     <!-- game end -->
 
+    <!-- modal save score start -->
+
+    <!-- Button trigger modal -->
+    <button
+      id="showModalButton"
+      type="button"
+      class="btn d-none"
+      data-bs-toggle="modal"
+      data-bs-target="#staticBackdrop"
+    ></button>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">
+              Simpan Score Anda
+            </h5>
+          </div>
+          <div class="modal-body">
+            <form action="#" onsubmit="saveModalAction();">
+              <label for="name" class="form-label">Masukkan nama</label>
+              <input
+                type="text"
+                class="form-control"
+                aria-describedby="nameHelp"
+                name="name"
+                id="name"
+              />
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+              onclick="dontSave()"
+              ;
+            >
+              Jangan simpan
+            </button>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              onclick="saveModalAction();"
+            >
+              Simpan
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal save score end -->
+
+    <!-- toast success save score start -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div
+        id="successToast"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="toast-header">
+          <img
+            src="images/check.png"
+            width="20"
+            class="rounded me-2"
+            alt="success icon"
+          />
+          <strong class="me-auto">Berhasil Save Score</strong>
+          <small>0 mins ago</small>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="toast-body">
+          Score Anda telah berhasil disimpan, silakan cek score Anda di halaman
+          Leaderboard
+        </div>
+      </div>
+    </div>
+    <!-- toast success save score end -->
+    <!-- toast failed save score start -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div
+        id="failedToast"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="toast-header">
+          <img
+            src="images/cancel.png"
+            width="20"
+            class="rounded me-2"
+            alt="success icon"
+          />
+          <strong class="me-auto">Tidak Berhasil Save Score</strong>
+          <small>0 mins ago</small>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="toast-body">
+          Score Anda tidak berhasil disimpan, silakan coba save score kembali
+        </div>
+      </div>
+    </div>
+    <!-- toast failed save score end -->
+
     <!-- Footer section start -->
     <footer class="mt-5">
       <div class="container-fluid bg-primary text-white">
@@ -102,12 +229,18 @@
           class="row text-center d-flex justify-content-center p-4 text-uppercase"
         >
           <div class="col-md-3">
-            <a href="/#hero" class="btn btn-link text-white fs-6 fw-bold text-decoration-none"
+            <a
+              href="/#hero"
+              class="btn btn-link text-white fs-6 fw-bold text-decoration-none"
               >About Bonk</a
             >
           </div>
           <div class="col-md-3">
-            <a href="/" class="btn btn-link text-white fs-6 fw-bold text-decoration-none">Home</a>
+            <a
+              href="/"
+              class="btn btn-link text-white fs-6 fw-bold text-decoration-none"
+              >Home</a
+            >
           </div>
           <div class="col-md-3">
             <a
@@ -117,7 +250,11 @@
             >
           </div>
           <div class="col-md-3">
-            <a href="/" class="btn btn-link text-white fs-6 fw-bold text-decoration-none">Contact</a>
+            <a
+              href="/"
+              class="btn btn-link text-white fs-6 fw-bold text-decoration-none"
+              >Contact</a
+            >
           </div>
         </div>
         <div
