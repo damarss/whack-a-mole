@@ -50,49 +50,111 @@
     </nav>
     <!-- navbar end -->
 
-    <!-- game start -->
-    <section class="game-title">
-      <div class="container text-center">
-        <h1 class="fw-bolder">Bonk <span id="count"></span></h1>
-      </div>
-    </section>
-
-    <section class="game" id="game">
-      <div class="container d-flex position-relative rounded-5 mb-5 overflow-hidden">
-        <a id="startBtn" class="btn-start p-5 align-self-center" href="#" role="button" onclick="startGame()"
-          ><i class="bi bi-play-circle"></i
-        ></a>
-        <div
-          class="row d-flex justify-content-center ps-lg-5 pe-lg-5 mb-5 ms-lg-5 me-lg-5"
-        >
-          <div id="bowl-1" class="col-3 col-sm-2 bowl mx-md-3">
-            <div class="cheems" onclick="hide(this)"></div>
-          </div>
-          <div id="bowl-2" class="col-3 col-sm-2 bowl mx-md-3">
-            <div class="cheems" onclick="hide(this)"></div>
-          </div>
-          <div id="bowl-3" class="col-3 col-sm-2 bowl mx-md-3">
-            <div class="cheems" onclick="hide(this)"></div>
-          </div>
-          <div id="bowl-4" class="col-3 col-sm-2 bowl mx-md-3">
-            <div class="cheems" onclick="hide(this)"></div>
-          </div>
-          <div id="bowl-5" class="col-3 col-sm-2 bowl mx-md-3">
-            <div class="cheems" onclick="hide(this)"></div>
-          </div>
-          <div id="bowl-6" class="col-3 col-sm-2 bowl mx-md-3">
-            <div class="cheems" onclick="hide(this)"></div>
-          </div>
-          <!-- <div id="bowl-7" class="col-sm-2 col-lg-3 bowl mx-md-3">
-            <div class="cheems" onclick="hide(this)"></div>
-          </div>
-          <div id="bowl-8" class="col-sm-2 col-lg-3 bowl mx-md-3">
-            <div class="cheems" onclick="hide(this)"></div>
-          </div> -->
+    <div class="mt-3" style="height: 100vh;">
+      <!-- game start -->
+      <section class="game-title">
+        <div class="container text-center">
+          <h1 class="fw-bolder">Bonk <span id="count"></span></h1>
         </div>
-      </div>
-    </section>
-    <!-- game end -->
+      </section>
+
+      <section class="game" id="game">
+        <div class="container d-flex position-relative rounded-5 mb-5 overflow-hidden">
+          <a id="startBtn" class="btn-start p-5 align-self-center" href="#" role="button" onclick="startGame()"
+            ><i class="bi bi-play-circle"></i
+          ></a>
+          <div
+            class="row d-flex justify-content-center ps-lg-5 pe-lg-5 mb-5 ms-lg-5 me-lg-5"
+          >
+            <div id="bowl-1" class="col-3 col-sm-2 bowl mx-md-3">
+              <div class="cheems" onclick="hide(this)"></div>
+            </div>
+            <div id="bowl-2" class="col-3 col-sm-2 bowl mx-md-3">
+              <div class="cheems" onclick="hide(this)"></div>
+            </div>
+            <div id="bowl-3" class="col-3 col-sm-2 bowl mx-md-3">
+              <div class="cheems" onclick="hide(this)"></div>
+            </div>
+            <div id="bowl-4" class="col-3 col-sm-2 bowl mx-md-3">
+              <div class="cheems" onclick="hide(this)"></div>
+            </div>
+            <div id="bowl-5" class="col-3 col-sm-2 bowl mx-md-3">
+              <div class="cheems" onclick="hide(this)"></div>
+            </div>
+            <div id="bowl-6" class="col-3 col-sm-2 bowl mx-md-3">
+              <div class="cheems" onclick="hide(this)"></div>
+            </div>
+            <!-- <div id="bowl-7" class="col-sm-2 col-lg-3 bowl mx-md-3">
+              <div class="cheems" onclick="hide(this)"></div>
+            </div>
+            <div id="bowl-8" class="col-sm-2 col-lg-3 bowl mx-md-3">
+              <div class="cheems" onclick="hide(this)"></div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+      <!-- game end -->
+    </div>
+    
+    <!-- Footer section -->
+    <div class="container-fluid mt-5">
+      <!-- Footer -->
+      <footer class="text-center text-white bg-primary">
+          <!-- Grid container -->
+          <div class="container">
+              <!-- Section: Links -->
+              <section class="mt-5">
+              <!-- Grid row-->
+                  <div class="row text-center d-flex justify-content-center p-4">
+                      <!-- Grid column -->
+                      <div class="col-md-2">
+                      <h6 class="text-uppercase font-weight-bold">
+                          <a href="/" class="text-white">About Bonk</a>
+                      </h6>
+                      </div>
+                      <!-- Grid column -->
+          
+                      <!-- Grid column -->
+                      <div class="col-md-2">
+                      <h6 class="text-uppercase font-weight-bold">
+                          <a href="/home.html" class="text-white">Home</a>
+                      </h6>
+                      </div>
+                      <!-- Grid column -->
+          
+                      <!-- Grid column -->
+                      <div class="col-md-2">
+                      <h6 class="text-uppercase font-weight-bold">
+                          <a href="/leaderboard.html" class="text-white">Leaderboard</a>
+                      </h6>
+                      </div>
+                      <!-- Grid column -->
+          
+                      <!-- Grid column -->
+                      <div class="col-md-2">
+                      <h6 class="text-uppercase font-weight-bold">
+                          <a href="#" class="text-white">Contact</a>
+                      </h6>
+                      </div>
+                      <!-- Grid column -->
+                  </div>
+              <!-- Grid row-->
+              </section>
+              <!-- Section: Links -->
+          </div>
+          <!-- Grid container -->
+  
+          <!-- Copyright -->
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+              © 2022 Copyright: Kelompok 10 Komnet
+          </div>
+          <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+  </div>
+  <!-- End of .container -->
+<!-- Footer section end -->
+
 
     <!-- modal save score start -->
 
