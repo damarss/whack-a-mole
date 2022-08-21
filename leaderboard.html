@@ -1,117 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leaderboard</title>
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/custom.css" />
 
-  </head>
-  <body onload="loadLeaderboard()">
-    <!-- navbar start -->
-    <nav class="navbar navbar-expand-lg py-3">
-      <div class="container">
-        <a class="navbar-brand fw-bold fs-2" href="/"> BONK. </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a href="/" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a
-                href="/leaderboard.html"
-                class="nav-link active"
-                aria-current="page"
-                >Leaderboard</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                href="/game.html"
-                class="btn btn-primary rounded-5 px-3 py-2 d-flex justify-content-center"
-                >Play Game</a
-              >
-            </li>
-          </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leaderboard</title>
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+
+</head>
+
+<body onload="loadLeaderboard()">
+  <!-- navbar start -->
+  <nav class="navbar navbar-expand-lg py-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-2" href="/"> BONK. </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a href="/" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="/leaderboard.html" class="nav-link active" aria-current="page">Leaderboard</a>
+          </li>
+          <li class="nav-item">
+            <a href="/game.html" class="btn btn-primary rounded-5 px-3 py-2 d-flex justify-content-center">Play Game</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar end -->
+
+  <!-- leaderboard start -->
+  <section class="leaderboard">
+    <div class="container mt-3">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody id="tabel-leaderboard"></tbody>
+      </table>
+    </div>
+
+    <!-- spinner start -->
+    <div id="spinner" class="container d-flex justify-content-center">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    <!-- spinner end -->
+  </section>
+  <!-- leaderboard end -->
+
+  <!-- Footer section start -->
+  <footer class="mt-5">
+    <div class="container-fluid bg-primary text-white">
+      <div class="row text-center d-flex justify-content-center p-4 text-uppercase">
+        <div class="col-md-3">
+          <a href="/#hero" class="btn btn-link text-white fs-6 fw-bold text-decoration-none">About Bonk</a>
+        </div>
+        <div class="col-md-3">
+          <a href="/" class="btn btn-link text-white fs-6 fw-bold text-decoration-none">Home</a>
+        </div>
+        <div class="col-md-3">
+          <a href="/leaderboard.html" class="btn btn-link text-white fs-6 fw-bold text-decoration-none">Leaderboard</a>
+        </div>
+        <div class="col-md-3">
+          <a href="/" class="btn btn-link text-white fs-6 fw-bold text-decoration-none">Contact</a>
         </div>
       </div>
-    </nav>
-    <!-- navbar end -->
-
-    <!-- leaderboard start -->
-    <section class="leaderboard">
-      <div class="container mt-3">
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th>Rank</th>
-              <th>Name</th>
-              <th>Score</th>
-            </tr>
-          </thead>
-          <tbody id="tabel-leaderboard"></tbody>
-        </table>
+      <div class="row p-3 text-center" style="background-color: rgba(0, 0, 0, 0.2)">
+        <div class="col">&copy; 2022 Copyright Kelompok 10 Komnet</div>
       </div>
+    </div>
+  </footer>
+  <!-- Footer section end -->
 
-      <!-- spinner start -->
-      <div id="spinner" class="container d-flex justify-content-center">
-        <div class="spinner-border" role="status">
-          <span class="visually-hidden">Loading...</span>
-        </div>
-      </div>
-      <!-- spinner end -->
-    </section>
-    <!-- leaderboard end -->
+  <script src="js/bootstrap.js"></script>
+  <script src="js/script.js"></script>
+</body>
 
-    <!-- Footer section start -->
-    <footer class="mt-5">
-      <div class="container-fluid bg-primary text-white">
-        <div
-          class="row text-center d-flex justify-content-center p-4 text-uppercase"
-        >
-          <div class="col-md-3">
-            <a href="/#hero" class="btn btn-link text-white fs-6 fw-bold text-decoration-none"
-              >About Bonk</a
-            >
-          </div>
-          <div class="col-md-3">
-            <a href="/" class="btn btn-link text-white fs-6 fw-bold text-decoration-none">Home</a>
-          </div>
-          <div class="col-md-3">
-            <a
-              href="/leaderboard.html"
-              class="btn btn-link text-white fs-6 fw-bold text-decoration-none"
-              >Leaderboard</a
-            >
-          </div>
-          <div class="col-md-3">
-            <a href="/" class="btn btn-link text-white fs-6 fw-bold text-decoration-none">Contact</a>
-          </div>
-        </div>
-        <div
-          class="row p-3 text-center"
-          style="background-color: rgba(0, 0, 0, 0.2)"
-        >
-          <div class="col">&copy; 2022 Copyright Kelompok 10 Komnet</div>
-        </div>
-      </div>
-    </footer>
-    <!-- Footer section end -->
-
-    <script src="js/bootstrap.js"></script>
-    <script src="js/script.js"></script>
-  </body>
 </html>

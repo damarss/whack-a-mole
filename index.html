@@ -1,186 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/custom.css" />
-  </head>
-  <body onload="loadLeaderboard(true)">
-    <!-- navbar start -->
-    <nav class="navbar navbar-expand-lg py-3">
-      <div class="container">
-        <a class="navbar-brand fw-bold fs-2" href="/"> BONK. </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a href="/" class="nav-link active" aria-current="page"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a href="/leaderboard.html" class="nav-link">Leaderboard</a>
-            </li>
-            <li class="nav-item">
-              <a
-                href="/game.html"
-                class="btn btn-primary rounded-5 px-3 py-2 d-flex justify-content-center"
-                >Play Game</a
-              >
-            </li>
-          </ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+</head>
+
+<body onload="loadLeaderboard(true)">
+  <!-- navbar start -->
+  <nav class="navbar navbar-expand-lg py-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-2" href="/"> BONK. </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a href="/" class="nav-link active" aria-current="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="/leaderboard.html" class="nav-link">Leaderboard</a>
+          </li>
+          <li class="nav-item">
+            <a href="/game.html" class="btn btn-primary rounded-5 px-3 py-2 d-flex justify-content-center">Play Game</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar end -->
+
+  <!-- hero start -->
+  <section id="hero" class="hero mt-3">
+    <div class="container">
+      <div class="row d-flex">
+        <div class="col-md-5 align-self-center">
+          <h1 class="fw-semibold text-uppercase">LET'S PLAY THE GAME!!</h1>
+          <p>
+            Bonk merupakan sebuah adaptasi dari game
+            <i>whack a mole</i> yang dihadirkan dalam bentuk yang berbeda dan
+            dapat dimainkan di website ini.
+          </p>
+          <div class="btn-toolbar d-flex align-items-center gap-2 mb-3" role="group" aria-label="button group">
+            <a href="/game.html" class="btn btn-primary rounded-5 px-5" role="button">Play</a>
+            <a href="#instruction" class="btn btn-link text-dark rounded-5" role="button">Learn More</a>
+          </div>
+        </div>
+        <div class="col-md-7 d-flex justify-content-center">
+          <!-- tempat gambar untuk hero start -->
+          <img class="p-sm-3" src="images/gameplay.png" alt="gameplay" width="500"
+            style="border-radius: 25px; box-shadow: 5px 10px; border: 2px solid;">
+          <!-- tempat gambar untuk hero end -->
         </div>
       </div>
-    </nav>
-    <!-- navbar end -->
+    </div>
+  </section>
+  <!-- hero end -->
 
-    <!-- hero start -->
-    <section id="hero" class="hero mt-3">
-      <div class="container">
-        <div class="row d-flex">
-          <div class="col-md-5 align-self-center">
-            <h1 class="fw-semibold text-uppercase">LET'S PLAY THE GAME!!</h1>
-            <p>
-              Bonk merupakan sebuah adaptasi dari game
-              <i>whack a mole</i> yang dihadirkan dalam bentuk yang berbeda dan
-              dapat dimainkan di website ini.
-            </p>
-            <div
-              class="btn-toolbar d-flex align-items-center gap-2 mb-3"
-              role="group"
-              aria-label="button group"
-            >
-              <a
-                href="/game.html"
-                class="btn btn-primary rounded-5 px-5"
-                role="button"
-                >Play</a
-              >
-              <a href="#instruction" class="btn btn-link text-dark rounded-5" role="button"
-                >Learn More</a
-              >
-            </div>
+  <!-- topfive start -->
+  <section class="topfive mt-5">
+    <div class="container">
+      <div class="row">
+        <h2 class="fw-bold text-center">Top 5 Player</h2>
+      </div>
+      <div class="row mx-md-5 px-md-5">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Name</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody id="tabel-topfive"></tbody>
+        </table>
+
+        <!-- spinner start -->
+        <div id="spinner" class="container d-flex justify-content-center">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
           </div>
-          <div class="col-md-7 d-flex justify-content-center">
-            <!-- tempat gambar untuk hero start -->
-            <img class="p-sm-3" src="images/gameplay.png" alt="gameplay" width="500" style="border-radius: 25px; box-shadow: 5px 10px; border: 2px solid;">
-            <!-- tempat gambar untuk hero end -->
-          </div>
+        </div>
+        <!-- spinner end -->
+      </div>
+    </div>
+  </section>
+  <!-- topfive end -->
+
+  <!-- instruction start -->
+  <section id="instruction" class="instruction mt-5">
+    <div class="container">
+      <div class="row mb-3">
+        <div class="col">
+          <h2 class="text-center fw-bold text-capitalize">
+            Dapatkan score tertinggimu dan<br>jadilah pemimpin klasemen
+          </h2>
         </div>
       </div>
-    </section>
-    <!-- hero end -->
-
-    <!-- topfive start -->
-    <section class="topfive mt-5">
-      <div class="container">
-        <div class="row">
-          <h2 class="fw-bold text-center">Top 5 Player</h2>
+      <div class="row mt-4 d-flex gap-3 justify-content-center">
+        <div class="col-md-4 pt-3 rounded-4">
+          <!-- ganti gambar start -->
+          <img src="images/start.png" alt="start game" width="75" heigh="75">
+          <!-- ganti gambar end -->
+          <h5 class="mt-3">1. Start</h5>
+          <p>Masuk ke halaman Play Game</p>
         </div>
-        <div class="row mx-md-5 px-md-5">
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th>Rank</th>
-                <th>Name</th>
-                <th>Score</th>
-              </tr>
-            </thead>
-            <tbody id="tabel-topfive"></tbody>
-          </table>
-
-          <!-- spinner start -->
-          <div id="spinner" class="container d-flex justify-content-center">
-            <div class="spinner-border" role="status">
-              <span class="visually-hidden">Loading...</span>
-            </div>
-          </div>
-          <!-- spinner end -->
+        <div class="col-md-4 pt-3 rounded-4">
+          <!-- ganti gambar start -->
+          <img src="images/videogame.png" alt="play game" width="75" heigh="75">
+          <!-- ganti gambar end -->
+          <h5 class="mt-3">2. Play</h5>
+          <p>Mainkan game yang ada di website ini</p>
+        </div>
+        <div class="col-md-4 pt-3 rounded-4">
+          <!-- ganti gambar start -->
+          <img src="images/trophy.png" alt="trophy" width="75" heigh="75">
+          <!-- ganti gambar end -->
+          <h5 class="mt-3">3. Be The Leader</h5>
+          <p>
+            Raih score tertinggi dan jangan lupa untuk simpan score setelah
+            selesai bermain
+          </p>
         </div>
       </div>
-    </section>
-    <!-- topfive end -->
+    </div>
+  </section>
+  <!-- instruction end -->
 
-    <!-- instruction start -->
-    <section id="instruction" class="instruction mt-5">
-      <div class="container">
-        <div class="row mb-3">
-          <div class="col">
-            <h2 class="text-center fw-bold text-capitalize">
-              Dapatkan score tertinggimu dan<br>jadilah pemimpin klasemen
-            </h2>
-          </div>
+  <!-- Footer section start -->
+  <footer class="mt-5">
+    <div class="container-fluid bg-primary text-white">
+      <div class="row text-center d-flex justify-content-center p-4 text-uppercase">
+        <div class="col-md-3">
+          <a href="#hero" class="btn btn-link text-white fs-6 fw-bold text-decoration-none">About Bonk</a>
         </div>
-        <div class="row mt-4 d-flex gap-3 justify-content-center">
-          <div class="col-md-4 pt-3 rounded-4">
-            <!-- ganti gambar start -->
-            <img src="images/start.png" alt="start game" width="75" heigh="75">
-            <!-- ganti gambar end -->
-            <h5 class="mt-3">1. Start</h5>
-            <p>Masuk ke halaman Play Game</p>
-          </div>
-          <div class="col-md-4 pt-3 rounded-4">
-            <!-- ganti gambar start -->
-            <img src="images/videogame.png" alt="play game" width="75" heigh="75">
-            <!-- ganti gambar end -->
-            <h5 class="mt-3">2. Play</h5>
-            <p>Mainkan game yang ada di website ini</p>
-          </div>
-          <div class="col-md-4 pt-3 rounded-4">
-            <!-- ganti gambar start -->
-            <img src="images/trophy.png" alt="trophy" width="75" heigh="75">
-            <!-- ganti gambar end -->
-            <h5 class="mt-3">3. Be The Leader</h5>
-            <p>
-              Raih score tertinggi dan jangan lupa untuk simpan score setelah
-              selesai bermain
-            </p>
-          </div>
+        <div class="col-md-3">
+          <a href="/" class="btn btn-link text-white fs-6 fw-bold text-decoration-none">Home</a>
+        </div>
+        <div class="col-md-3">
+          <a href="/leaderboard.html" class="btn btn-link text-white fs-6 fw-bold text-decoration-none">Leaderboard</a>
+        </div>
+        <div class="col-md-3">
+          <a href="/" class="btn btn-link text-white fs-6 fw-bold text-decoration-none">Contact</a>
         </div>
       </div>
-    </section>
-    <!-- instruction end -->
-
-    <!-- Footer section start -->
-    <footer class="mt-5">
-      <div class="container-fluid bg-primary text-white">
-        <div class="row text-center d-flex justify-content-center p-4 text-uppercase">
-          <div class="col-md-3">
-            <a href="#hero" class="btn btn-link text-white fs-6 fw-bold text-decoration-none">About Bonk</a>
-          </div>
-          <div class="col-md-3">
-            <a href="/" class="btn btn-link text-white fs-6 fw-bold text-decoration-none">Home</a>
-          </div>
-          <div class="col-md-3">
-            <a href="/leaderboard.html" class="btn btn-link text-white fs-6 fw-bold text-decoration-none">Leaderboard</a>
-          </div>
-          <div class="col-md-3">
-            <a href="/" class="btn btn-link text-white fs-6 fw-bold text-decoration-none">Contact</a>
-          </div>
-        </div>
-        <div class="row p-3 text-center" style="background-color: rgba(0, 0, 0, 0.2);">
-          <div class="col">
-            &copy; 2022 Copyright Kelompok 10 Komnet
-          </div>
+      <div class="row p-3 text-center" style="background-color: rgba(0, 0, 0, 0.2);">
+        <div class="col">
+          &copy; 2022 Copyright Kelompok 10 Komnet
         </div>
       </div>
-    </footer>
-    <!-- Footer section end -->
+    </div>
+  </footer>
+  <!-- Footer section end -->
 
-    <script src="js/bootstrap.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
 </html>

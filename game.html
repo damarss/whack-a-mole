@@ -1,274 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game</title>
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/custom.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-    />
-  </head>
-  <body>
-    <!-- navbar start -->
-    <nav class="navbar navbar-expand-lg py-3">
-      <div class="container">
-        <a class="navbar-brand fw-bold fs-2" href="/"> BONK. </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a href="/" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="/leaderboard.html" class="nav-link">Leaderboard</a>
-            </li>
-            <li class="nav-item active">
-              <a
-                href="/game.html"
-                class="btn btn-primary active rounded-5 px-3 py-2 d-flex justify-content-center"
-                aria-current="page"
-                >Play Game</a
-              >
-            </li>
-          </ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game</title>
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+</head>
+
+<body>
+  <!-- navbar start -->
+  <nav class="navbar navbar-expand-lg py-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-2" href="/"> BONK. </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a href="/" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="/leaderboard.html" class="nav-link">Leaderboard</a>
+          </li>
+          <li class="nav-item active">
+            <a href="/game.html" class="btn btn-primary active rounded-5 px-3 py-2 d-flex justify-content-center"
+              aria-current="page">Play Game</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar end -->
+
+  <!-- game start -->
+  <section class="game-title">
+    <div class="container text-center">
+      <h1 class="fw-bolder">Bonk <span id="count"></span></h1>
+    </div>
+  </section>
+
+  <section class="game" id="game">
+    <div class="container d-flex position-relative rounded-5 mb-5 overflow-hidden">
+      <a id="startBtn" class="btn-start p-5 align-self-center" href="#" role="button" onclick="startGame()"><i
+          class="bi bi-play-circle"></i></a>
+      <div class="row d-flex justify-content-center ps-lg-5 pe-lg-5 mb-5 ms-lg-5 me-lg-5">
+        <div id="bowl-1" class="col-2 col-md-4 bowl mx-md-3">
+          <div class="cheems" onclick="hide(this)"></div>
         </div>
-      </div>
-    </nav>
-    <!-- navbar end -->
-
-    <!-- game start -->
-    <section class="game-title">
-      <div class="container text-center">
-        <h1 class="fw-bolder">Bonk <span id="count"></span></h1>
-      </div>
-    </section>
-
-    <section class="game" id="game">
-      <div
-        class="container d-flex position-relative rounded-5 mb-5 overflow-hidden"
-      >
-        <a
-          id="startBtn"
-          class="btn-start p-5 align-self-center"
-          href="#"
-          role="button"
-          onclick="startGame()"
-          ><i class="bi bi-play-circle"></i
-        ></a>
-        <div
-          class="row d-flex justify-content-center ps-lg-5 pe-lg-5 mb-5 ms-lg-5 me-lg-5"
-        >
-          <div id="bowl-1" class="col-2 col-md-4 bowl mx-md-3">
-            <div class="cheems" onclick="hide(this)"></div>
-          </div>
-          <div id="bowl-2" class="col-2 col-md-4 bowl mx-md-3">
-            <div class="cheems" onclick="hide(this)"></div>
-          </div>
-          <div id="bowl-3" class="col-2 col-md-4 bowl mx-md-3">
-            <div class="cheems" onclick="hide(this)"></div>
-          </div>
-          <div id="bowl-4" class="col-2 col-md-4 bowl mx-md-3">
-            <div class="cheems" onclick="hide(this)"></div>
-          </div>
-          <div id="bowl-5" class="col-2 col-md-4 bowl mx-md-3">
-            <div class="cheems" onclick="hide(this)"></div>
-          </div>
-          <div id="bowl-6" class="col-2 col-md-4 bowl mx-md-3">
-            <div class="cheems" onclick="hide(this)"></div>
-          </div>
+        <div id="bowl-2" class="col-2 col-md-4 bowl mx-md-3">
+          <div class="cheems" onclick="hide(this)"></div>
         </div>
-      </div>
-    </section>
-    <!-- game end -->
-
-    <!-- modal save score start -->
-
-    <!-- Button trigger modal -->
-    <button
-      id="showModalButton"
-      type="button"
-      class="btn d-none"
-      data-bs-toggle="modal"
-      data-bs-target="#staticBackdrop"
-    ></button>
-
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="staticBackdrop"
-      data-bs-backdrop="static"
-      data-bs-keyboard="false"
-      tabindex="-1"
-      aria-labelledby="staticBackdropLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">
-              Simpan Score Anda
-            </h5>
-          </div>
-          <div class="modal-body">
-            <form action="#" onsubmit="saveModalAction();">
-              <label for="name" class="form-label">Masukkan nama</label>
-              <input
-                type="text"
-                class="form-control"
-                aria-describedby="nameHelp"
-                name="name"
-                id="name"
-              />
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-              onclick="dontSave()"
-              ;
-            >
-              Jangan simpan
-            </button>
-            <button
-              type="submit"
-              class="btn btn-primary"
-              onclick="saveModalAction();"
-            >
-              Simpan
-            </button>
-          </div>
+        <div id="bowl-3" class="col-2 col-md-4 bowl mx-md-3">
+          <div class="cheems" onclick="hide(this)"></div>
+        </div>
+        <div id="bowl-4" class="col-2 col-md-4 bowl mx-md-3">
+          <div class="cheems" onclick="hide(this)"></div>
+        </div>
+        <div id="bowl-5" class="col-2 col-md-4 bowl mx-md-3">
+          <div class="cheems" onclick="hide(this)"></div>
+        </div>
+        <div id="bowl-6" class="col-2 col-md-4 bowl mx-md-3">
+          <div class="cheems" onclick="hide(this)"></div>
         </div>
       </div>
     </div>
-    <!-- modal save score end -->
+  </section>
+  <!-- game end -->
 
-    <!-- toast success save score start -->
-    <div class="toast-container position-fixed bottom-0 end-0 p-3">
-      <div
-        id="successToast"
-        class="toast"
-        role="alert"
-        aria-live="assertive"
-        aria-atomic="true"
-      >
-        <div class="toast-header">
-          <img
-            src="images/check.png"
-            width="20"
-            class="rounded me-2"
-            alt="success icon"
-          />
-          <strong class="me-auto">Berhasil Save Score</strong>
-          <small>0 mins ago</small>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="toast"
-            aria-label="Close"
-          ></button>
+  <!-- modal save score start -->
+
+  <!-- Button trigger modal -->
+  <button id="showModalButton" type="button" class="btn d-none" data-bs-toggle="modal"
+    data-bs-target="#staticBackdrop"></button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">
+            Simpan Score Anda
+          </h5>
         </div>
-        <div class="toast-body">
-          Score Anda telah berhasil disimpan, silakan cek score Anda di halaman
-          Leaderboard
+        <div class="modal-body">
+          <form action="#" onsubmit="saveModalAction();">
+            <label for="name" class="form-label">Masukkan nama</label>
+            <input type="text" class="form-control" aria-describedby="nameHelp" name="name" id="name" />
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="dontSave()" ;>
+            Jangan simpan
+          </button>
+          <button type="submit" class="btn btn-primary" onclick="saveModalAction();">
+            Simpan
+          </button>
         </div>
       </div>
     </div>
-    <!-- toast success save score end -->
-    <!-- toast failed save score start -->
-    <div class="toast-container position-fixed bottom-0 end-0 p-3">
-      <div
-        id="failedToast"
-        class="toast"
-        role="alert"
-        aria-live="assertive"
-        aria-atomic="true"
-      >
-        <div class="toast-header">
-          <img
-            src="images/cancel.png"
-            width="20"
-            class="rounded me-2"
-            alt="success icon"
-          />
-          <strong class="me-auto">Tidak Berhasil Save Score</strong>
-          <small>0 mins ago</small>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="toast"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="toast-body">
-          Score Anda tidak berhasil disimpan, silakan coba save score kembali
-        </div>
+  </div>
+  <!-- modal save score end -->
+
+  <!-- toast success save score start -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="successToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <img src="images/check.png" width="20" class="rounded me-2" alt="success icon" />
+        <strong class="me-auto">Berhasil Save Score</strong>
+        <small>0 mins ago</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Score Anda telah berhasil disimpan, silakan cek score Anda di halaman
+        Leaderboard
       </div>
     </div>
-    <!-- toast failed save score end -->
+  </div>
+  <!-- toast success save score end -->
+  <!-- toast failed save score start -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="failedToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <img src="images/cancel.png" width="20" class="rounded me-2" alt="success icon" />
+        <strong class="me-auto">Tidak Berhasil Save Score</strong>
+        <small>0 mins ago</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Score Anda tidak berhasil disimpan, silakan coba save score kembali
+      </div>
+    </div>
+  </div>
+  <!-- toast failed save score end -->
 
-    <!-- Footer section start -->
-    <footer class="mt-5">
-      <div class="container-fluid bg-primary text-white">
-        <div
-          class="row text-center d-flex justify-content-center p-4 text-uppercase"
-        >
-          <div class="col-md-3">
-            <a
-              href="/#hero"
-              class="btn btn-link text-white fs-6 fw-bold text-decoration-none"
-              >About Bonk</a
-            >
-          </div>
-          <div class="col-md-3">
-            <a
-              href="/"
-              class="btn btn-link text-white fs-6 fw-bold text-decoration-none"
-              >Home</a
-            >
-          </div>
-          <div class="col-md-3">
-            <a
-              href="/leaderboard.html"
-              class="btn btn-link text-white fs-6 fw-bold text-decoration-none"
-              >Leaderboard</a
-            >
-          </div>
-          <div class="col-md-3">
-            <a
-              href="/"
-              class="btn btn-link text-white fs-6 fw-bold text-decoration-none"
-              >Contact</a
-            >
-          </div>
+  <!-- Footer section start -->
+  <footer class="mt-5">
+    <div class="container-fluid bg-primary text-white">
+      <div class="row text-center d-flex justify-content-center p-4 text-uppercase">
+        <div class="col-md-3">
+          <a href="/#hero" class="btn btn-link text-white fs-6 fw-bold text-decoration-none">About Bonk</a>
         </div>
-        <div
-          class="row p-3 text-center"
-          style="background-color: rgba(0, 0, 0, 0.2)"
-        >
-          <div class="col">&copy; 2022 Copyright Kelompok 10 Komnet</div>
+        <div class="col-md-3">
+          <a href="/" class="btn btn-link text-white fs-6 fw-bold text-decoration-none">Home</a>
+        </div>
+        <div class="col-md-3">
+          <a href="/leaderboard.html" class="btn btn-link text-white fs-6 fw-bold text-decoration-none">Leaderboard</a>
+        </div>
+        <div class="col-md-3">
+          <a href="/" class="btn btn-link text-white fs-6 fw-bold text-decoration-none">Contact</a>
         </div>
       </div>
-    </footer>
-    <!-- Footer section end -->
+      <div class="row p-3 text-center" style="background-color: rgba(0, 0, 0, 0.2)">
+        <div class="col">&copy; 2022 Copyright Kelompok 10 Komnet</div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer section end -->
 
-    <audio src="audio/bonk.mp3" id="sfx"></audio>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+  <audio src="audio/bonk.mp3" id="sfx"></audio>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
 </html>

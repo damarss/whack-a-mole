@@ -3,126 +3,114 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  min-height: 100vh;
-}
-
-/* navbar */
-nav a.btn {
-  background-color: #e7eaf5;
-  border: none;
-  color: #0c145a;
-}
-
-nav a.btn:hover {
-  background-color: #4d17e2;
-  color: #e7eaf5;
-}
-
-nav .active a.btn {
-  background-color: #5526d5;
-  color: #e7eaf5;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
 }
 
 /* home */
 .instruction .col-md-4 {
-  /* ganti background, sekarang masih asal */
-  background-color: #f3f5fc;
-  width: 360px;
-  height: 230px;
+    /* ganti background, sekarang masih asal */
+    background-color: #f3f5fc;
+    width: 360px;
+    height: 230px;
 }
 
 
 /* game */
 .bowl {
-  width: 12.5rem;
-  height: 12.5rem;
-  padding: 0;
-  overflow: hidden;
-  position: relative;
+    width: 12.5rem;
+    height: 12.5rem;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
 }
 
 .bowl::after {
-  content: " ";
-  width: 12.5rem;
-  height: 12.5rem;
-  display: block;
-  background: url("../images/dog-bowl.png") no-repeat;
-  background-size: 80%;
-  position: absolute;
-  left: 1.5625rem;
-  top: 5.3125rem;
-  filter: invert(1);
+    content: " ";
+    width: 12.5rem;
+    height: 12.5rem;
+    display: block;
+    background: url("../images/dog-bowl.png") no-repeat;
+    background-size: 80%;
+    position: absolute;
+    left: 1.5625rem;
+    top: 5.3125rem;
+    filter: invert(1);
 }
 
 .cheems {
-  width: 12.5rem;
-  height: 12.5rem;
-  background: url("../images/cheems.png") no-repeat;
-  position: absolute;
-  right: 2rem;
-  top: 13rem;
-  background-size: 150%;
-  transition: top 0.1s;
+    width: 12.5rem;
+    height: 12.5rem;
+    background: url("../images/cheems.png") no-repeat;
+    position: absolute;
+    right: 2rem;
+    top: 13rem;
+    background-size: 150%;
+    transition: top 0.1s;
 }
 
 .cheems.show {
-  top: 0;
+    top: 0;
 }
 
 .btn-start {
-  position: absolute;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 1;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  font-size: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 /* leaderboard */
-#tabel-leaderboard td, #tabel-topfive td {
-  margin: auto;
-  padding-top: 1.3rem;
-  padding-bottom: 1.3rem;
-  line-height: 21px;
-  border: none;
+#tabel-leaderboard td,
+#tabel-topfive td {
+    margin: auto;
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+    line-height: 21px;
+    border: none;
 }
 
-#tabel-leaderboard tr:nth-child(odd), #tabel-topfive tr:nth-child(odd) {
-  background-color: #f3f5fc;
+#tabel-leaderboard tr:nth-child(odd),
+#tabel-topfive tr:nth-child(odd) {
+    background-color: #f3f5fc;
 }
 
-#tabel-leaderboard td:first-child, #tabel-topfive td:first-child {
-  font-weight: 600;
-  font-size: 21px;
-  width: 17%;
-  padding: 1.3rem;
+#tabel-leaderboard td:first-child,
+#tabel-topfive td:first-child {
+    font-weight: 600;
+    font-size: 21px;
+    width: 17%;
+    padding: 1.3rem;
 }
 
-#tabel-leaderboard td:last-child, #tabel-topfive td:last-child {
-  padding: 0.5rem;
-  width: 25%;
+#tabel-leaderboard td:last-child,
+#tabel-topfive td:last-child {
+    padding: 0.5rem;
+    width: 25%;
 }
 
-#tabel-leaderboard td:last-child .container, #tabel-topfive td:last-child .container {
-  margin: auto 0;
-  padding: 0.8rem;
-  font-size: 18px;
-  font-weight: 800;
-  background-color: #4d17e2;
-  color: #e7eaf5;
-  border-radius: 0.5rem;
-  text-align: center;
-  width: 75px;
+#tabel-leaderboard td:last-child .container,
+#tabel-topfive td:last-child .container {
+    margin: auto 0;
+    padding: 0.8rem;
+    font-size: 18px;
+    font-weight: 800;
+    background-color: var(--bs-blue);
+    color: #e7eaf5;
+    border-radius: 0.5rem;
+    text-align: center;
+    width: 75px;
 }

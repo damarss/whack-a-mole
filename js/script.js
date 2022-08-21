@@ -86,9 +86,9 @@ async function loadLeaderboardData(topFive = false) {
 }
 
 async function loadLeaderboard(topFive = false) {
-  const leaderboard = topFive
-    ? document.getElementById("tabel-topfive")
-    : document.getElementById("tabel-leaderboard");
+  const leaderboard = topFive ?
+    document.getElementById("tabel-topfive") :
+    document.getElementById("tabel-leaderboard");
   const spinner = document.getElementById("spinner");
   const leaderBoardData = await loadLeaderboardData(topFive);
 
@@ -124,12 +124,10 @@ async function saveCurrentScore(nama, skor) {
     "https://api.steinhq.com/v1/storages/62f7153bbc148508ba872067/Sheet1";
   let success = fetch(url, {
     method: "POST",
-    body: JSON.stringify([
-      {
-        name: nama,
-        score: skor,
-      },
-    ]),
+    body: JSON.stringify([{
+      name: nama,
+      score: skor,
+    }, ]),
     headers: {
       "Content-type": "application/json; charset=UTF-8",
     },
